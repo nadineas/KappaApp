@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
 
 export default class Logo extends Component {
   render() {
     return (
         <View style = {styles.container}>
-            <Text style = {styles.kappaTitle}>{'KAPPA PHI \nLAMBDA'}</Text>
+            <Image style = {styles.kappaLogo} source={require("../images/KplLogo.png")}/>
             <Text style = {styles.schoolTitle}>{'PSI CHAPTER UIUC'}</Text>
         </View>
     );
@@ -18,10 +18,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-end'
   },
-  kappaTitle: {
-    textAlign: 'center',
-    fontSize: 36,
-    color: 'white',
+  kappaLogo: {
+    width: 250,
+    height: 100
   },
   schoolTitle: {
     fontSize: 16,
